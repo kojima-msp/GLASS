@@ -1,0 +1,14 @@
+# @package _global_
+dataset: nys
+LR_lambda: 0.07369678133524601
+OGTR_lambda: 0.2855803857709031
+OGTR_online_lambda: 0.4051568981186143  # existing_optimize.py n_trials=15
+TRSS_lambda: 0.3296665665525747
+TRSS_beta: 0.4081485844143144
+TRSS_epsilon: 0.0024023140643541735
+Tikhonov_gamma: 0.884095533712202
+Tikhonov_beta: 0.0010156484266088336
+proposed_parameter_path: ${models_dir}/release/batch_nys_L8.pth
+proposed_online_parameter_path: ${models_dir}/release/online_nys_L8.pth
+gcn_parameter_path: ${models_dir}/release/gcn_nys.pth
+cheb_parameter_path: ${models_dir}/release/cheb_nys.pth

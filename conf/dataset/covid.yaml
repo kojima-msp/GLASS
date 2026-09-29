@@ -1,0 +1,15 @@
+# @package _global_
+dataset: covid
+LR_lambda: 0.006137868936670776
+OGTR_lambda: 0.04767610249163871
+OGTR_online_lambda: 0.9420095560748996  # existing_optimize.py n_trials=15
+TRSS_lambda: 0.15994377417762154
+TRSS_beta: 0.2088246266411854
+TRSS_epsilon: 0.0022845737656750132
+Tikhonov_gamma: 1.2609820592789878
+Tikhonov_beta: 0.0010084699038815116
+proposed_parameter_path: ${models_dir}/release/batch_covid_L8.pth
+# train_from_datasets_online.py Epoch=30
+proposed_online_parameter_path: ${models_dir}/release/online_covid_L8.pth
+gcn_parameter_path: ${models_dir}/release/gcn_covid.pth
+cheb_parameter_path: ${models_dir}/release/cheb_covid.pth

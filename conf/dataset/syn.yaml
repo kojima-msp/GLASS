@@ -1,0 +1,16 @@
+# @package _global_
+dataset: syn
+# baselines tuned by existing_optimize.py with K=100
+LR_lambda: 0.010517839474817894
+OGTR_lambda: 2.7170158539608975
+OGTR_online_lambda: 4.743496051999024  # existing_optimize.py n_trials=15
+TRSS_lambda: 1.8131190828479298
+TRSS_beta: 0.018197720763747864
+TRSS_epsilon: 0.01199676966840491
+Tikhonov_gamma: 1.6572671518940019
+Tikhonov_beta: 0.03782544595596205
+proposed_parameter_path: ${models_dir}/release/batch_syn_L8.pth
+# train_from_datasets_online.py Epoch=50
+proposed_online_parameter_path: ${models_dir}/release/online_syn_L8.pth
+gcn_parameter_path: ${models_dir}/release/gcn_syn.pth
+cheb_parameter_path: ${models_dir}/release/cheb_syn.pth

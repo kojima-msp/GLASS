@@ -1,0 +1,49 @@
+data_dir: ${project_root:}/datasets
+models_dir: ${project_root:}/src/models
+
+proposed_L: 8
+K: 50
+InpaintingDAU_P: 2
+InpaintingDAU_Q: 5
+
+# static GNN baselines (GCN / ChebNet), applied to each frame independently
+static_gnn_hidden: 32
+static_gnn_layers: 2
+cheb_K: 3
+static_gnn_lr: 0.01
+static_gnn_epochs: 100
+
+lr: 0.001
+# lambda = 10^param, so its gradient grows with lambda; a larger lr makes the unrolling diverge
+lr_lambda: 0.001
+lr_dh: 0.01
+lr_sobolev: 0.01
+
+Epoch: 100
+online_batch: 90   # samples per optimizer step of train_from_datasets_online.py
+ratio: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+
+# noise/signal std ratio: 2..10% = SNR 34..20 dB
+noise_levels: [0.02, 0.04, 0.06, 0.08, 0.10]
+n_trials: 100
+
+# compare_methods sweep: null -> both; 'ratio' or 'noise' -> only that one
+mode: null
+
+# single sample shown by result_visualization.py
+test_sampling: 0.5
+test_noise: 0.1
+
+dataset: ???
+LR_lambda: null
+OGTR_lambda: null
+OGTR_online_lambda: null
+TRSS_lambda: null
+TRSS_beta: null
+TRSS_epsilon: null
+Tikhonov_gamma: null
+Tikhonov_beta: null
+proposed_parameter_path: null
+proposed_online_parameter_path: null
+gcn_parameter_path: null
+cheb_parameter_path: null

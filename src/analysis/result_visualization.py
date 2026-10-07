@@ -4,6 +4,8 @@ import numpy as np
 plt.rcParams['xtick.direction'] = 'in'
 plt.rcParams['ytick.direction'] = 'in'
 plt.rcParams['axes.grid'] = True
+# 投稿規定で Type3 フォントが禁止されているため TrueType で埋め込む
+plt.rcParams['pdf.fonttype'] = 42
 
 import rootutils
 

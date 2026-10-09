@@ -1,12 +1,12 @@
 GLASS
 ====
 
-[![paper-info](https://img.shields.io/badge/IEEE_TSIPN-Submitted-gray?labelColor=00629B)](https://ieeexplore.ieee.org/document/10094838)
-[![arXiv](https://img.shields.io/badge/arXiv-xxxxx-gray?labelColor=b31b1b)]()
+[![paper-info](https://img.shields.io/badge/IEEE_TSIPN-Submitted-gray?labelColor=00629B)](https://arxiv.org/abs/2610.11359)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.11359-gray?labelColor=b31b1b)](https://arxiv.org/abs/2610.11359)
 [![Python](https://custom-icon-badges.herokuapp.com/badge/Python-3572A5?logo=Python&logoColor=white)]()
 [![our-page](https://img.shields.io/badge/Our_Homepage-green)](https://www.sip.comm.eng.osaka-u.ac.jp/)
 
-Official PyTorch implementation of **GLASS** (restoration of time-varying **G**raph signals with **L**earned **A**daptive **S**patiotemporal **S**moothness), proposed in "Deep Algorithm Unrolling for Time-Varying Graph Signal Restoration under Spatiotemporal Smoothness Priors".
+Official PyTorch implementation of **GLASS** (restoration of time-varying **G**raph signals with **L**earned **A**daptive **S**patiotemporal **S**moothness), proposed in "Unrolled Time-Varying Graph Signal Restoration under Spatiotemporal Smoothness Priors".
 
 Our preliminary results were presented in "Restoration of Time-Varying Graph Signals using Deep Algorithm Unrolling" (ICASSP 2023).
 
@@ -16,7 +16,7 @@ Our preliminary results were presented in "Restoration of Time-Varying Graph Sig
 ![Overview of GLASS](docs/overview.png)
 
 ## Abstract
-> In this paper, we propose restoration methods for time-varying graph signals using deep algorithm unrolling (DAU). Time-varying graph signals, such as signals obtained from sensor networks, are nonuniformly distributed in space and observed as time series. Since these observed signals often contain noise and missing values, their restoration needs to consider both spatial and temporal relationships. Our approach is based on an optimization problem that models signal properties using a spatiotemporal regularizer that combines a Sobolev operator for spatial smoothness and a multi-tap FIR filter for temporal smoothness. We then unroll the iterative conjugate gradient method to solve this problem and learn the regularization parameters and filter coefficients in each iteration. Our method can be applied to supervised batch, supervised online, and unsupervised batch settings to learn these parameters. Experiments on several synthetic and real-world datasets show that the supervised batch method achieves the lowest RMSEs in almost all the situations. The supervised online and the unsupervised batch methods are also competitive with the existing batch methods.
+> In this paper, we propose restoration methods for time-varying graph signals using deep algorithm unrolling (DAU). Time-varying graph signals, such as signals obtained from sensor networks, are nonuniformly distributed in space and observed as time series. Since these observed signals often contain noise and missing values, their restoration needs to consider both spatial and temporal relationships. Our approach is based on an optimization problem that models signal properties using a spatiotemporal regularizer that combines a Sobolev operator for spatial smoothness and a multi-tap FIR filter for temporal smoothness. We then unroll the iterative conjugate gradient method to solve this problem and learn the regularization parameters and filter coefficients in each iteration. Our method can be applied to supervised batch, supervised online, and unsupervised batch settings to learn these parameters. Experiments on several synthetic and real-world datasets show that the supervised batch method achieves the lowest RMSEs in almost all cases. The supervised online and the unsupervised batch methods outperform the existing methods of their own settings, and are often competitive with the existing batch methods.
 
 ## Install
 We use [uv](https://docs.astral.sh/uv/) to manage the Python environment.
@@ -165,6 +165,12 @@ uv run python src/analysis/result_visualization.py dataset=syn
 
 ## Citation
 ```
+@misc{kojima2026unrolled,
+  author={Kojima, Hayate and Noguchi, Hikari and Yamada, Koki and Tanaka, Yuichi},
+  title={Unrolled Time-Varying Graph Signal Restoration under Spatiotemporal Smoothness Priors},
+  year={2026},
+  url={https://arxiv.org/abs/2610.11359}}
+
 @INPROCEEDINGS{10094838,
   author={Kojima, Hayate and Noguchi, Hikari and Yamada, Koki and Tanaka, Yuichi},
   booktitle={ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
